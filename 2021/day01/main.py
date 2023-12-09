@@ -1,17 +1,26 @@
-def part1(lines: list[str]) -> int:
-    pass
+def first(lines):
+    incs = 0
+    for i in range(1, len(lines)):
+        if lines[i] > lines[i - 1]:
+            incs += 1
+    return incs
 
 
-def part2(lines: list[str]) -> int:
-    pass
+def second(lines):
+    incs = 0
+    last = max(lines)
+    for i in range(len(lines) - 2):
+        try:
+            win = sum(lines[i:i+3])
+            if win > last:
+                incs += 1
+            last = win
+        except IndexError:
+            pass
+    return incs
 
 
-def main():
-    with open("input.txt") as f:
-        lines = [l.strip() for l in f.readlines() if l.strip()]
-        print("Part 1:", part1(lines))
-        print("Part 2:", part2(lines))
-
-
-if __name__ == '__main__':
-    main()
+with open("input.txt") as f:
+    lines = [int(x) for x in f.readlines()]
+    print(first(lines))
+    print(second(lines))

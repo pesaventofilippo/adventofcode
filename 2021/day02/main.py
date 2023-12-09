@@ -1,17 +1,32 @@
-def part1(lines: list[str]) -> int:
-    pass
+def first(input):
+    x = 0
+    z = 0
+    for c, d in input:
+        if c == "forward":
+            x += d
+        elif c == "up":
+            z -= d
+        elif c == "down":
+            z += d
+    return x * z
 
 
-def part2(lines: list[str]) -> int:
-    pass
+def second(input):
+    x = 0
+    z = 0
+    aim = 0
+    for c, d in input:
+        if c == "forward":
+            x += d
+            z += aim * d
+        elif c == "up":
+            aim -= d
+        elif c == "down":
+            aim += d
+    return x * z
 
 
-def main():
-    with open("input.txt") as f:
-        lines = [l.strip() for l in f.readlines() if l.strip()]
-        print("Part 1:", part1(lines))
-        print("Part 2:", part2(lines))
-
-
-if __name__ == '__main__':
-    main()
+with open("input.txt") as f:
+    instr = [(c, int(d)) for c, d in [line.split() for line in f.readlines()]]
+    print(first(instr))
+    print(second(instr))
