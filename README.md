@@ -19,3 +19,4 @@ grain of salt :)
 | [2016](2016/) | 0/50  | [AoC / 2016](https://adventofcode.com/2016) |
 | [2017](2017/) | 0/50  | [AoC / 2017](https://adventofcode.com/2017) |
 | [2018](2018/) | 0/50  | [AoC / 2018](https://adventofcode.com/2018) |
+| [2019](2019/) | 0/50  | [AoC / 2019](https://adventofcode.com/2019) |
