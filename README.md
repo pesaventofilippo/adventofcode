@@ -16,3 +16,4 @@ grain of salt :)
 | Year          | Stars | AoC Event                                   |
 |---------------|-------|---------------------------------------------|
 | [2015](2015/) | 0/50  | [AoC / 2015](https://adventofcode.com/2015) |
+| [2016](2016/) | 0/50  | [AoC / 2016](https://adventofcode.com/2016) |
