@@ -1,17 +1,40 @@
-def part1(lines: list[str]) -> int:
-    pass
+games = {}
 
 
-def part2(lines: list[str]) -> int:
-    pass
+def is_valid(game: list[dict[str, int]]) -> bool:
+    for extraction in game:
+        if extraction.get("red", 0) > 12:
+            return False
+        if extraction.get("green", 0) > 13:
+            return False
+        if extraction.get("blue", 0) > 14:
+            return False
+    return True
 
 
-def main():
-    with open("input.txt") as f:
-        lines = [l.strip() for l in f.readlines() if l.strip()]
-        print("Part 1:", part1(lines))
-        print("Part 2:", part2(lines))
+def game_power(game: list[dict[str, int]]) -> bool:
+    maxs = {}
+    for extraction in game:
+        for color, amount in extraction.items():
+            maxs[color] = max(maxs.get(color, 0), amount)
+    return maxs["red"] * maxs["green"] * maxs["blue"]
 
 
-if __name__ == '__main__':
-    main()
+with open("input.txt") as f:
+    total = 0
+    for line in f.readlines():
+        line = line.strip()
+
+        game, data = line.split(": ")
+        gamenum = int(game.split(" ")[1])
+        games[gamenum] = []
+
+        for ext in data.split("; "):
+            balls = ext.split(", ")
+            games[gamenum].append({
+                b.split()[1]: int(b.split()[0]) for b in balls
+            })
+
+        total += game_power(games[gamenum])
+
+    print(total)
