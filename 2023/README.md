@@ -13,7 +13,7 @@ Solutions for the 2023 edition of [Advent of Code](https://adventofcode.com/2023
 | [Day 7](day07/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2023 / 07](https://adventofcode.com/2023/day/7)  |
 | [Day 8](day08/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2023 / 08](https://adventofcode.com/2023/day/8)  |
 | [Day 9](day09/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2023 / 09](https://adventofcode.com/2023/day/9)  |
-| [Day 10](day10/) |                    |                    | [AoC / 2023 / 10](https://adventofcode.com/2023/day/10) |
+| [Day 10](day10/) | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2023 / 10](https://adventofcode.com/2023/day/10) |
 | [Day 11](day11/) |                    |                    | [AoC / 2023 / 11](https://adventofcode.com/2023/day/11) |
 | [Day 12](day12/) |                    |                    | [AoC / 2023 / 12](https://adventofcode.com/2023/day/12) |
 | [Day 13](day13/) |                    |                    | [AoC / 2023 / 13](https://adventofcode.com/2023/day/13) |
