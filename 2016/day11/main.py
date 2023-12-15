@@ -1,5 +1,11 @@
 def part1(lines: list[str]) -> int:
-    pass
+    floors: list[list[tuple[str, str]]] = {
+        0: [("promethium", "G"), ("promethium", "M")],
+        1: [("cobalt", "G"), ("curium", "G"), ("ruthenium", "G"), ("plutonium", "G")],
+        2: [("cobalt", "M"), ("curium", "M"), ("ruthenium", "M"), ("plutonium", "M")],
+        3: []
+    }
+
 
 
 def part2(lines: list[str]) -> int:

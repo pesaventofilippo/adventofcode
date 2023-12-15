@@ -8,11 +8,11 @@ Solutions for the 2016 edition of [Advent of Code](https://adventofcode.com/2016
 | [Day 2](day02/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2016 / 02](https://adventofcode.com/2016/day/2)  |
 | [Day 3](day03/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2016 / 03](https://adventofcode.com/2016/day/3)  |
 | [Day 4](day04/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2016 / 04](https://adventofcode.com/2016/day/4)  |
-| [Day 5](day05/)  |                    |                    | [AoC / 2016 / 05](https://adventofcode.com/2016/day/5)  |
-| [Day 6](day06/)  |                    |                    | [AoC / 2016 / 06](https://adventofcode.com/2016/day/6)  |
-| [Day 7](day07/)  |                    |                    | [AoC / 2016 / 07](https://adventofcode.com/2016/day/7)  |
-| [Day 8](day08/)  |                    |                    | [AoC / 2016 / 08](https://adventofcode.com/2016/day/8)  |
-| [Day 9](day09/)  |                    |                    | [AoC / 2016 / 09](https://adventofcode.com/2016/day/9)  |
+| [Day 5](day05/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2016 / 05](https://adventofcode.com/2016/day/5)  |
+| [Day 6](day06/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2016 / 06](https://adventofcode.com/2016/day/6)  |
+| [Day 7](day07/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2016 / 07](https://adventofcode.com/2016/day/7)  |
+| [Day 8](day08/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2016 / 08](https://adventofcode.com/2016/day/8)  |
+| [Day 9](day09/)  | :heavy_check_mark: | :heavy_check_mark: | [AoC / 2016 / 09](https://adventofcode.com/2016/day/9)  |
 | [Day 10](day10/) |                    |                    | [AoC / 2016 / 10](https://adventofcode.com/2016/day/10) |
 | [Day 11](day11/) |                    |                    | [AoC / 2016 / 11](https://adventofcode.com/2016/day/11) |
 | [Day 12](day12/) |                    |                    | [AoC / 2016 / 12](https://adventofcode.com/2016/day/12) |

@@ -1,9 +1,19 @@
-def part1(lines: list[str]) -> int:
-    pass
+def part1(lines: list[str]) -> str:
+    res = ""
+    for j in range(len(lines[0])):
+        col = [row[j] for row in lines]
+        count = {c: col.count(c) for c in col}
+        res += max(count, key=count.get)
+    return res
 
 
 def part2(lines: list[str]) -> int:
-    pass
+    res = ""
+    for j in range(len(lines[0])):
+        col = [row[j] for row in lines]
+        count = {c: col.count(c) for c in col}
+        res += min(count, key=count.get)
+    return res
 
 
 def main():
