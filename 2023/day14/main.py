@@ -1,22 +1,26 @@
-def transpose(lines: list[str], reverse=False) -> list[str]:
+from functools import cache
+
+@cache
+def transpose(lines: tuple[str], reverse: bool=False) -> tuple[str]:
     _range = range(len(lines[0])-1, -1, -1) if reverse else range(len(lines[0]))
-    return [''.join(row[j] for row in lines) for j in _range]
+    return tuple(''.join(row[j] for row in lines) for j in _range)
 
-
+@cache
 def roll_line(line: str) -> str:
     return "#".join(''.join(sorted(b, reverse=True)) for b in line.split("#"))
 
-
-def roll_all(lines: list[str]) -> list[str]:
-    return transpose([roll_line(row) for row in transpose(lines)])
+@cache
+def roll_all(lines: tuple[str]) -> tuple[str]:
+    return transpose(tuple(roll_line(row) for row in transpose(lines)))
 
 
 def part1(lines: list[str]) -> int:
-    lines = roll_all(lines)
+    lines = roll_all(tuple(lines))
     return sum((len(lines)-i)*lines[i].count("O") for i in range(len(lines)))
 
 
 def part2(lines: list[str]) -> int:
+    lines = tuple(lines)
     for _ in range(1000000000*4):
         lines = roll_all(lines)
         lines = transpose(lines, reverse=True)
