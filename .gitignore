@@ -1,6 +1,7 @@
 ### CUSTOM FILES ###
-*.txt
-*.test
+input.txt
+input.test
+puzzle.md
 
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm+all,visualstudiocode,python,c++,macos,windows,linux
 # Edit at https://www.toptal.com/developers/gitignore?templates=pycharm+all,visualstudiocode,python,c++,macos,windows,linux
