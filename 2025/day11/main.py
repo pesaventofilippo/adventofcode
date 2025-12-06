@@ -1,13 +1,9 @@
-from intcode import execute
-
 def part1(lines: list[str]) -> int:
-    mem = list(map(int, lines[0].split(",")))
-    return execute(mem, [1])
+    pass
 
 
 def part2(lines: list[str]) -> int:
-    mem = list(map(int, lines[0].split(",")))
-    return execute(mem, [5])
+    pass
 
 
 def main():

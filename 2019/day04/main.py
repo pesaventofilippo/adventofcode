@@ -1,9 +1,27 @@
 def part1(lines: list[str]) -> int:
-    pass
+    start, end = map(int, lines[0].split("-"))
+    count = 0
+    for i in range(start, end+1):
+        s = str(i)
+        if list(s) != sorted(s):
+            continue
+        if len(set(s)) == len(s):
+            continue
+        count += 1
+    return count
 
 
 def part2(lines: list[str]) -> int:
-    pass
+    start, end = map(int, lines[0].split("-"))
+    count = 0
+    for i in range(start, end+1):
+        s = str(i)
+        if list(s) != sorted(s):
+            continue
+        if 2 not in [s.count(c) for c in s]:
+            continue
+        count += 1
+    return count
 
 
 def main():

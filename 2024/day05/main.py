@@ -1,5 +1,13 @@
 def part1(lines: list[str]) -> int:
-    pass
+    precedence_rules: list[tuple[int, int]] = []
+
+    for line in lines:
+        if '|' in line:
+            a, b = map(int, line.split('|'))
+            precedence_rules.append((a, b))
+        else:
+            updates = map(int, line.split(','))
+
 
 
 def part2(lines: list[str]) -> int:

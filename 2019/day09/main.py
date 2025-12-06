@@ -1,9 +1,15 @@
+from intcode import IntcodeCPU
+
 def part1(lines: list[str]) -> int:
-    pass
+    cpu = IntcodeCPU.from_line(lines[0])
+    cpu.add_inputs(1)
+    print(cpu.execute()[0])
 
 
 def part2(lines: list[str]) -> int:
-    pass
+    cpu = IntcodeCPU.from_line(lines[0])
+    cpu.add_inputs(2)
+    print(cpu.execute()[0])
 
 
 def main():

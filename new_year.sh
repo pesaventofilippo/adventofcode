@@ -12,7 +12,7 @@ mkdir -p "$YEAR"
 cp ".templates/readme-year.md" "$YEAR/README.md"
 sed -i '' "s/#YEAR/$YEAR/g" "$YEAR/README.md"
 
-for day in $(seq -f "%02g" 1 25); do
+for day in $(seq -f "%02g" 1 12); do
     mkdir -p "$YEAR/day$day"
     cp ".templates/day.py" "$YEAR/day$day/main.py"
     touch "$YEAR/day$day/input.txt"
