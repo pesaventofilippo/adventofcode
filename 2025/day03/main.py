@@ -1,9 +1,27 @@
+def maxn(bank: list[int], n: int) -> int:
+    if n == 1:
+        return max(bank)
+    total = max(bank[:-n+1])
+    idx = bank.index(total)
+    total *= 10 ** (n - 1)
+    total += maxn(bank[idx+1:], n-1)
+    return total
+
+
 def part1(lines: list[str]) -> int:
-    pass
+    banks = [[int(x) for x in bank] for bank in lines]
+    total = 0
+    for bank in banks:
+        total += maxn(bank, 2)
+    return total
 
 
 def part2(lines: list[str]) -> int:
-    pass
+    banks = [[int(x) for x in bank] for bank in lines]
+    total = 0
+    for bank in banks:
+        total += maxn(bank, 12)
+    return total
 
 
 def main():

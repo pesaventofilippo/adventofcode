@@ -1,9 +1,24 @@
 def part1(lines: list[str]) -> int:
-    pass
+    dial = 50
+    total = 0
+    for line in lines:
+        amt = int(line.replace("L", "-").replace("R", ""))
+        dial = (dial + amt) % 100
+        if dial == 0:
+            total += 1
+    return total
 
 
 def part2(lines: list[str]) -> int:
-    pass
+    dial = 50
+    total = 0
+    for line in lines:
+        amt = int(line.replace("L", "-").replace("R", ""))
+        for _ in range(abs(amt)):
+            dial = (dial + (1 if amt > 0 else -1)) % 100
+            if dial == 0:
+                total += 1
+    return total
 
 
 def main():

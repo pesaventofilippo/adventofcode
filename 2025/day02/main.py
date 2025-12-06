@@ -1,9 +1,41 @@
 def part1(lines: list[str]) -> int:
-    pass
+    ranges = [map(int, x.split("-")) for x in lines[0].split(",")]
+
+    def is_invalid(id: int) -> bool:
+        s = str(id)
+        if len(s) % 2 != 0:
+            return False
+        return s[:len(s)//2] == s[len(s)//2:]
+
+    total = 0
+    for (start, end) in ranges:
+        for id in range(start, end+1):
+            if is_invalid(id):
+                total += id
+
+    return total
 
 
 def part2(lines: list[str]) -> int:
-    pass
+    ranges = [map(int, x.split("-")) for x in lines[0].split(",")]
+
+    def is_invalid(id: int) -> bool:
+        s = str(id)
+        for div in range(2, len(s)+1):
+            if len(s) % div != 0:
+                continue
+            if s[:len(s)//div] * div == s:
+                return True
+
+        return False
+
+    total = 0
+    for (start, end) in ranges:
+        for id in range(start, end + 1):
+            if is_invalid(id):
+                total += id
+
+    return total
 
 
 def main():
