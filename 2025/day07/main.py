@@ -1,9 +1,32 @@
 def part1(lines: list[str]) -> int:
-    pass
+    manifold = [[x for x in line] for line in lines]
+    splits = 0
+    for i in range(1, len(manifold)):
+        for j in range(len(manifold[i])):
+            if manifold[i-1][j] in ['S', '|']:
+                if manifold[i][j] == '^':
+                    manifold[i][j-1] = manifold[i][j+1] = '|'
+                    splits += 1
+                else:
+                    manifold[i][j] = '|'
+
+    return splits
 
 
 def part2(lines: list[str]) -> int:
-    pass
+    manifold = [[1 if x=='S' else 0 if x=='.' else x for x in line]
+                for line in lines if not all(c in "." for c in line)]
+
+    for i in range(1, len(manifold)):
+        for j in range(len(manifold[i])):
+            if manifold[i - 1][j] not in ['^', 0]:
+                if manifold[i][j] == '^':
+                    manifold[i][j - 1] += manifold[i - 1][j]
+                    manifold[i][j + 1] += manifold[i - 1][j]
+                else:
+                    manifold[i][j] += manifold[i - 1][j]
+
+    return sum(x for x in manifold[-1] if x != '^')
 
 
 def main():
